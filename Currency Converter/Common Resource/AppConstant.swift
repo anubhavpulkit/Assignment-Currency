@@ -11,5 +11,6 @@ import UIKit
 class AppConstant {
     static let screenWidth = UIScreen.main.bounds.width
     static let screenHeight = UIScreen.main.bounds.height
-    static let NoInternetTitle = "No Internet Connection"
+    static let limit = 5
+    static let currencies = ["AED", "USD", "INR", "EUR", "AUD", "BDT", "CAD", "IDR", "IRR", "KRW", "LKR", "PKR", "RUB", "SAR"]
 }

@@ -48,7 +48,7 @@ struct CustomText: View {
     }
 }
 
-struct CapsuleButtonStyle: ButtonStyle {
+struct CustomButtonStyle: ButtonStyle {
     var secondColor: Color = Color.white
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -64,3 +64,20 @@ struct CapsuleButtonStyle: ButtonStyle {
     }
 }
 
+public func getSymbol(forCurrencyCode code: String) -> String? {
+   let locale = NSLocale(localeIdentifier: code)
+    return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
+}
+
+public func getDate() -> String {
+    let date = Date()
+    date.formatted(.dateTime.day().month().year())
+    return date.formatted(.dateTime.day().month().year())
+}
+
+public func getTime() -> String {
+    let formatter = DateFormatter()
+    formatter.timeStyle = .short
+    let dateString = formatter.string(from: Date())
+    return dateString
+}

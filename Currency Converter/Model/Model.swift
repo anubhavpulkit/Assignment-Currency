@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ExchangeRate: Decodable{
+struct ExchangeRateModel: Decodable{
     let base_code: String
     let target_code: String
     let conversion_rate: Float

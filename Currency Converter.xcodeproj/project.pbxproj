@@ -16,6 +16,7 @@
 		3D90EFEA2A97EA0500A3AF0A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90EFE92A97EA0500A3AF0A /* Utils.swift */; };
 		3D90EFEC2A97F1B500A3AF0A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90EFEB2A97F1B500A3AF0A /* Model.swift */; };
 		3D90EFEE2A97F29D00A3AF0A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90EFED2A97F29D00A3AF0A /* ViewModel.swift */; };
+		3D9BF8202A98E6DB009B9B05 /* ConversionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9BF81F2A98E6DB009B9B05 /* ConversionHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		3D90EFE92A97EA0500A3AF0A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3D90EFEB2A97F1B500A3AF0A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3D90EFED2A97F29D00A3AF0A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		3D9BF81F2A98E6DB009B9B05 /* ConversionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				3D90EFDB2A97987E00A3AF0A /* ContentView.swift */,
+				3D9BF81F2A98E6DB009B9B05 /* ConversionHistory.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				3D90EFEC2A97F1B500A3AF0A /* Model.swift in Sources */,
 				3D90EFE82A979BD100A3AF0A /* AppConstant.swift in Sources */,
+				3D9BF8202A98E6DB009B9B05 /* ConversionHistory.swift in Sources */,
 				3D90EFDC2A97987E00A3AF0A /* ContentView.swift in Sources */,
 				3D90EFDA2A97987E00A3AF0A /* Currency_ConverterApp.swift in Sources */,
 				3D90EFEE2A97F29D00A3AF0A /* ViewModel.swift in Sources */,
@@ -325,9 +329,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,9 +358,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

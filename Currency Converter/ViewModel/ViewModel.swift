@@ -9,36 +9,34 @@ import Foundation
 import SwiftUI
 
 class Network: ObservableObject {
-    @Published var conversion: ExchangeRate? = nil
+    @Published var conversion: ExchangeRateModel? = nil
     
     @Published var historyBaseCode: [String] = []
-    @Published var historyTargetCount: [String] = []
+    @Published var historyTargetCode: [String] = []
     @Published var historyAmount: [String] = []
     @Published var historyConvertedAmount: [Float] = []
-    @Published var histroyConversionRate:[Float] = []
-    @Published var timin: [String] = []
+    @Published var histroyConversionRate: [Float] = []
+    @Published var timing: [String] = []
+    @Published var date: [String] = []
     
-    func fetchData(baseCode: String, targetCode: String, amount: String) {
+    func fetchConvertedData(baseCode: String, targetCode: String, amount: String) {
         guard let url = URL(string: "https://v6.exchangerate-api.com/v6/7cff21eee63121b9b48a03f4/pair/\(baseCode)/\(targetCode)/\(amount)") else { return }
         URLSession.shared.dataTask(with: url) { data, result, error in
             if let data = data {
                 do {
-                    let decodedData = try JSONDecoder().decode(ExchangeRate.self, from: data)
+                    let decodedData = try JSONDecoder().decode(ExchangeRateModel.self, from: data)
                     DispatchQueue.main.async { [self] in
                         self.conversion = decodedData
                         self.historyBaseCode.append(conversion?.base_code ?? "")
-                        self.historyTargetCount.append(conversion?.target_code ?? "")
+                        self.historyTargetCode.append(conversion?.target_code ?? "")
                         self.historyAmount.append(amount)
                         self.historyConvertedAmount.append(conversion?.conversion_result ?? 0.0)
                         self.histroyConversionRate.append(conversion?.conversion_rate ?? 0.0)
                         
                         UserDefaultManager.standard.setBaseCodeHistory(keywordsArray: historyBaseCode)
-                        
-//                        print(self.historyBaseCode, "historyBaseCode")
-//                        print(self.historyTargetCount, "historyTargetCount")
-//                        print(self.historyAmount, "historyAmount")
-//                        print(self.historyConvertedAmount, "historyConvertedAmount")
-//                        print(self.histroyConversionRate, "self.histroyConversionRate")
+                        UserDefaultManager.standard.setTargetCodeHistory(keywordsArray: historyTargetCode)
+                        UserDefaultManager.standard.setHistoryConvertedAmount(keywordsArray: historyConvertedAmount)
+                        UserDefaultManager.standard.setHistroyConversionRate(keywordsArray: histroyConversionRate)
                     }
                 } catch {
                     //Print JSON decoding error
